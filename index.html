@@ -280,6 +280,7 @@
         <span class="meta-item"><strong>Application ID:</strong> <code>com.deepak.phonecleaner</code></span>
         <span class="meta-item"><strong>Effective Date:</strong> October 20, 2026</span>
         <span class="meta-item"><strong>Last Updated:</strong> October 20, 2026</span>
+        <span class="meta-item"><strong>Document Version:</strong> 1.1</span>
       </div>
     </header>
 
@@ -332,7 +333,7 @@
             <strong>Local Scanning:</strong> File indexing, size calculations, folder grouping, and duplicate detection (via content hashing) are performed on your device. The app's own code does not transmit your personal files to any server.
           </li>
           <li>
-            <strong>User-Confirmed Deletion:</strong> The app does not delete files automatically. Every deletion requires your explicit selection and confirmation.
+            <strong>User-Confirmed Deletion:</strong> Scanned junk, media, duplicates, and other shared-storage items are not deleted automatically. Those deletions require your explicit selection and confirmation (and may also require an Android system delete-consent dialog when All files access is not granted). Separately, if you tap the optional Quick Boost notification action, the app may delete only K-Cleaner's own temporary cache files under its app-specific cache directories without an additional in-app confirmation dialog.
           </li>
           <li>
             <strong>Platform Boundaries:</strong> Under Android's security model, K-Cleaner cannot access or clear other apps' private internal caches or data directories (such as <code>/data/data/</code> or protected areas under <code>/Android/data/</code>). Only K-Cleaner's own cache can be cleared directly.
@@ -391,6 +392,11 @@
                 <td>Each uninstall is confirmed through the Android system dialog.</td>
               </tr>
               <tr>
+                <td><code>KILL_BACKGROUND_PROCESSES</code></td>
+                <td>Allow Process Explorer / Quick Boost to request that Android stop eligible background processes belonging to other apps using the standard platform API. This does not grant force-stop of protected system processes or access to other apps' private data.</td>
+                <td>Granted at install time as a normal permission; without it, background-process stopping would fail.</td>
+              </tr>
+              <tr>
                 <td><code>POST_NOTIFICATIONS</code><br><small>(Android 13+)</small></td>
                 <td>Send periodic cleaning reminders and Quick Boost notification actions.</td>
                 <td>No notifications are sent. Can be toggled in K-Cleaner's Settings.</td>
@@ -410,7 +416,10 @@
         </div>
 
         <p>
-          <strong>Permissions not requested:</strong> K-Cleaner does not request access to your camera, microphone, GPS/location, contacts, call logs, SMS, calendar, or biometric data. The app does not use <code>QUERY_ALL_PACKAGES</code>.
+          <strong>Permissions not requested by app code:</strong> K-Cleaner does not request access to your camera, microphone, GPS/precise location sensors, contacts, call logs, SMS, calendar, or biometric data. The app does not use <code>QUERY_ALL_PACKAGES</code>.
+        </p>
+        <p>
+          <strong>Permissions merged from advertising SDKs:</strong> The Google Mobile Ads SDK may add advertising-related permissions to the installed app (for example <code>com.google.android.gms.permission.AD_ID</code> and Android Advertising Services permissions). These support advertising identifiers and Privacy Sandbox features described in the <a href="#advertising">Advertising</a> section. They are not used by K-Cleaner's file-cleaning features.
         </p>
       </section>
 
@@ -428,11 +437,11 @@
             <strong>Data Usage:</strong> Queries <code>NetworkStatsManager</code> to display per-app Wi-Fi and mobile data consumption. No network packets, browsing history, or message content is intercepted or recorded.
           </li>
           <li>
-            <strong>Process Information &amp; Quick Boost:</strong> Reads process memory usage via <code>ActivityManager</code>. Quick Boost terminates background processes using Android's standard <code>killBackgroundProcesses()</code> and removes K-Cleaner's own temporary cache files. Reclaimed memory figures reflect measured differentials.
+            <strong>Process Information &amp; Quick Boost:</strong> Lists processes using <code>UsageStatsManager</code> and/or <code>ActivityManager</code>. Per-app memory figures shown in Process Explorer are <em>estimates</em> derived from device memory-class heuristics, not precise per-process memory measurements. Quick Boost terminates eligible background processes using Android's standard <code>killBackgroundProcesses()</code> and removes only K-Cleaner's own temporary cache files (for example <code>.tmp</code>, <code>.temp</code>, or <code>cache_*</code> under the app's cache directories). Reported RAM reclaim is based on the measured change in available system memory after the operation; if no positive change can be measured, the app reports that the change was too small to measure rather than inventing a value.
           </li>
         </ul>
         <p>
-          This usage and process information is queried and displayed locally. K-Cleaner's own code does not transmit it over the network.
+          This usage and process information is queried and displayed locally. K-Cleaner's own application code does not transmit usage histories, process lists, or file inventories over the network.
         </p>
       </section>
 
@@ -443,10 +452,12 @@
           K-Cleaner can send optional cleaning reminder notifications:
         </p>
         <ul>
-          <li><strong>Daily Limit:</strong> At most two notifications per calendar day.</li>
-          <li><strong>Quiet Hours:</strong> No notifications between 10:00 PM and 7:00 AM local time.</li>
-          <li><strong>Quick Boost from Notification:</strong> Tapping the Quick Boost action in a notification runs the cleanup without showing an advertisement.</li>
-          <li><strong>User Control:</strong> You can enable or disable notifications in K-Cleaner's Settings screen or via Android system settings for the app at any time.</li>
+          <li><strong>Daily Limit:</strong> At most two proactive reminder notifications per local calendar day.</li>
+          <li><strong>Spacing:</strong> Proactive reminders are spaced at least four hours apart.</li>
+          <li><strong>Quiet Hours:</strong> No proactive notifications between 10:00 PM and 7:00 AM local time.</li>
+          <li><strong>Quick Boost from Notification:</strong> Tapping the Quick Boost action in a notification runs the cleanup without showing an advertisement. User-initiated Quick Boost updates do not count toward the daily proactive limit.</li>
+          <li><strong>Attribution:</strong> Notifications are labeled as coming from K-Cleaner and are not designed to imitate system security or OS alerts.</li>
+          <li><strong>User Control:</strong> You can enable or disable reminders in K-Cleaner's Settings screen or via Android system settings for the app at any time. On Android 13 and newer, posting also requires the runtime <code>POST_NOTIFICATIONS</code> permission.</li>
         </ul>
       </section>
 
@@ -457,7 +468,7 @@
           K-Cleaner is ad-supported and does not charge subscription fees. The app includes the <strong>Google Mobile Ads SDK (AdMob)</strong> version 23.6.0 (<code>play-services-ads</code>).
         </p>
         <p>
-          According to <a href="https://developers.google.com/android/guides/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google's data disclosure documentation</a> for this SDK, AdMob automatically collects and may share the following categories of information for advertising, analytics, and fraud prevention:
+          According to <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google's Play data disclosure documentation for the Google Mobile Ads SDK</a> (reviewed against the published disclosure for recent SDK releases; this app currently depends on <code>play-services-ads</code> 23.6.0), AdMob automatically collects and may share the following categories of information for advertising, analytics, and fraud prevention:
         </p>
 
         <div class="table-wrapper">
@@ -495,7 +506,7 @@
         </div>
 
         <p>
-          This data is collected and transmitted by the Google Mobile Ads SDK, is encrypted in transit, and is subject to Google's own retention and processing practices. This collection is required for the SDK to function and cannot be selectively disabled within the app, though you can manage your advertising preferences as described in the <a href="#retention">User Controls</a> section.
+          This data is collected and transmitted by the Google Mobile Ads SDK and is subject to Google's own retention and processing practices. Google states that user data collected by the Google Mobile Ads SDK is encrypted in transit using TLS. Ad delivery generally requires this SDK activity and cannot be selectively disabled within the app while ads remain enabled, though you can manage advertising preferences as described in the <a href="#retention">User Controls</a> section.
         </p>
         <p>
           The AdMob SDK also transitively includes the <code>play-services-measurement-sdk-api</code> library (used internally by Google Ads) and the <code>ads-adservices</code> library (for Android Privacy Sandbox support). These components may process additional signals as part of Google's advertising infrastructure.
@@ -585,7 +596,7 @@
           <li>Any additional network activity initiated by Google's advertising infrastructure and its transitive dependencies.</li>
         </ol>
         <p>
-          All network communication by Google's SDKs uses TLS encryption in transit.
+          According to Google's published Mobile Ads data disclosure, user data collected by the Google Mobile Ads SDK is encrypted in transit using the Transport Layer Security (TLS) protocol. K-Cleaner does not implement custom cleartext networking for its own features.
         </p>
       </section>
 
@@ -638,10 +649,10 @@
           <li>The app's file processing is designed to operate locally, reducing the surface area for remote data exposure from the app's own code.</li>
           <li>Internal components such as broadcast receivers and the <code>FileProvider</code> are configured with <code>android:exported="false"</code> to prevent unauthorized access from other apps.</li>
           <li>Android's application sandbox isolates K-Cleaner's private storage from other installed applications.</li>
-          <li>Network communication by third-party SDKs uses TLS encryption in transit.</li>
+          <li>According to Google's documentation, Google Mobile Ads SDK user-data transmissions use TLS in transit.</li>
         </ul>
         <p>
-          No method of electronic storage or transmission is completely secure. We encourage you to keep your device's operating system updated.
+          No method of electronic storage or transmission is completely secure, and this policy does not guarantee absolute security. We encourage you to keep your device's operating system updated.
         </p>
       </section>
 
@@ -673,8 +684,8 @@
     <footer>
       <div class="footer-content">
         <div>
-          <p><strong>K-Cleaner Privacy Policy</strong> • Version 1.0</p>
-          <p>Effective Date: October 20, 2026 • Developed by Deepak Kumar</p>
+          <p><strong>K-Cleaner Privacy Policy</strong> • Version 1.1</p>
+          <p>Effective Date: October 20, 2026 • Last Updated: October 20, 2026 • Developed by Deepak Kumar</p>
         </div>
         <div>
           <p>Contact: <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></p>
