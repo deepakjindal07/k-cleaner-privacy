@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for K-Cleaner, an Android device storage and maintenance utility developed by Deepak Kumar.">
+  <meta name="author" content="Deepak Kumar">
+  <title>Privacy Policy — K-Cleaner</title>
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-surface: #f8fafc;
+      --color-border: #e2e8f0;
+      --color-text-main: #0f172a;
+      --color-text-muted: #475569;
+      --color-text-subtle: #64748b;
+      --color-primary: #1668fe;
+      --color-primary-dark: #0f4ec2;
+      --color-primary-light: #eff6ff;
+      --color-accent-border: #bfdbfe;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+    }
+
+    body {
+      font-family: var(--font-stack);
+      line-height: 1.7;
+      color: var(--color-text-main);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    /* Header styling */
+    header {
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .brand-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-primary);
+      background-color: var(--color-primary-light);
+      border: 1px solid var(--color-accent-border);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--color-text-main);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--color-text-subtle);
+    }
+
+    .meta-item strong {
+      color: var(--color-text-muted);
+    }
+
+    /* Notice callout */
+    .callout {
+      background-color: var(--color-primary-light);
+      border-left: 4px solid var(--color-primary);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 28px 0;
+      font-size: 15px;
+      color: var(--color-text-muted);
+    }
+
+    .callout strong {
+      color: var(--color-text-main);
+    }
+
+    /* Table of Contents */
+    .toc {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 32px 0 44px;
+    }
+
+    .toc h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      margin-bottom: 14px;
+      border: none;
+      padding-bottom: 0;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    @media (min-width: 640px) {
+      .toc ol {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 24px;
+      }
+    }
+
+    .toc a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover, .toc a:focus-visible {
+      text-decoration: underline;
+      color: var(--color-primary-dark);
+    }
+
+    /* Section styling */
+    section {
+      margin-bottom: 44px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      margin: 20px 0 10px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--color-text-muted);
+    }
+
+    ul, ol {
+      margin: 12px 0 18px 24px;
+      color: var(--color-text-muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: var(--color-text-main);
+    }
+
+    /* Tables */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 20px 0 24px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+      background-color: #fff;
+    }
+
+    thead {
+      background-color: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    th {
+      padding: 12px 16px;
+      font-weight: 600;
+      color: var(--color-text-main);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      vertical-align: top;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background-color: #fbfcfe;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.88em;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #b91c1c;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover, a:focus-visible {
+      color: var(--color-primary-dark);
+      text-decoration-thickness: 2px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding-top: 32px;
+      margin-top: 60px;
+      font-size: 14px;
+      color: var(--color-text-subtle);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .contact-box {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 16px 0;
+    }
+
+    .contact-box p {
+      margin-bottom: 6px;
+    }
+
+    .contact-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.85rem; }
+      .container { padding: 28px 16px 48px; }
+      th, td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="brand-badge">Official Legal Document</span>
+      <h1>K-Cleaner Privacy Policy</h1>
+      <div class="meta-row">
+        <span class="meta-item"><strong>Developer:</strong> Deepak Kumar</span>
+        <span class="meta-item"><strong>App Name:</strong> K-Cleaner</span>
+        <span class="meta-item"><strong>Application ID:</strong> <code>com.deepak.phonecleaner</code></span>
+        <span class="meta-item"><strong>Effective Date:</strong> October 20, 2026</span>
+        <span class="meta-item"><strong>Last Updated:</strong> October 20, 2026</span>
+      </div>
+    </header>
+
+    <div class="callout">
+      <strong>Core Privacy Architecture:</strong> K-Cleaner is designed as an on-device utility. File indexing, duplicate scanning, metadata extraction, and storage analyses are processed locally on your Android device. We do not operate developer servers to upload, store, inspect, or share your personal files, photos, videos, or documents.
+    </div>
+
+    <nav class="toc" aria-label="Table of Contents">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#overview">Developer Identity &amp; Overview</a></li>
+        <li><a href="#file-processing">On-Device File Scanning &amp; Cleanup</a></li>
+        <li><a href="#permissions">Android Permissions &amp; Access Scope</a></li>
+        <li><a href="#usage-stats">Usage Access, Process &amp; Data Insights</a></li>
+        <li><a href="#notifications">Notifications &amp; Reminders</a></li>
+        <li><a href="#advertising">Advertising &amp; Identifiers (Google AdMob)</a></li>
+        <li><a href="#consent">Consent Management (Google UMP)</a></li>
+        <li><a href="#third-parties">Third-Party Service Providers &amp; Data Sharing</a></li>
+        <li><a href="#network">Network Transmissions &amp; Analytics</a></li>
+        <li><a href="#retention">Data Retention, Deletion &amp; User Controls</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#regional">International &amp; Regional Privacy Rights</a></li>
+        <li><a href="#security">Security Safeguards</a></li>
+        <li><a href="#changes">Changes to This Policy &amp; Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <!-- 1. Overview -->
+      <section id="overview">
+        <h2>1. Developer Identity &amp; Overview</h2>
+        <p>
+          This Privacy Policy explains how <strong>K-Cleaner</strong> ("the Application", "we", "our", or "us"), an Android application developed by <strong>Deepak Kumar</strong>, handles information when installed on your mobile device.
+        </p>
+        <p>
+          K-Cleaner is an Android storage maintenance and file management utility designed to help users inspect local storage utilization, discover potential junk files (such as obsolete temporary caches and redundant APK packages), find duplicate media, and organize files stored on their devices.
+        </p>
+        <p>
+          We are committed to data transparency, user control, and compliance with Google Play Developer Program Policies, the General Data Protection Regulation (GDPR), the UK Data Protection Act, the California Consumer Privacy Act (CCPA/CPRA), the Indian Digital Personal Data Protection Act (DPDP), and other applicable global privacy regulations.
+        </p>
+      </section>
+
+      <!-- 2. On-Device File Processing -->
+      <section id="file-processing">
+        <h2>2. On-Device File Scanning &amp; Cleanup</h2>
+        <p>
+          K-Cleaner's primary features inspect shared storage on your device. The architectural principles governing file operations are:
+        </p>
+        <ul>
+          <li>
+            <strong>100% Local Scanning:</strong> When K-Cleaner scans your storage, calculates file sizes, groups files by extension or folder, or checks for duplicate photos and videos using content hashing, all computations occur strictly in-memory on your device.
+          </li>
+          <li>
+            <strong>No File Uploads:</strong> K-Cleaner does not transmit, upload, replicate, or synchronize your personal files, photos, videos, audio recordings, or documents to any remote server or cloud infrastructure.
+          </li>
+          <li>
+            <strong>Strict User Confirmation:</strong> K-Cleaner never deletes any file automatically or silently. Every deletion operation requires explicit selection and confirmation by the user.
+          </li>
+          <li>
+            <strong>Android Platform Boundaries:</strong> Under Android operating system security models, K-Cleaner cannot inspect, access, or clear private internal caches or data belonging to other applications (such as <code>/data/data/</code> or protected <code>/Android/data/</code> directories). Only K-Cleaner's own application cache can be cleared directly; for other applications, K-Cleaner acts as an informational assistant guiding you to Android's built-in system settings.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 3. Permissions -->
+      <section id="permissions">
+        <h2>3. Android Permissions &amp; Access Scope</h2>
+        <p>
+          To perform file management and utility functions, K-Cleaner requests certain Android system permissions. Each permission is requested strictly to enable specific user-facing features:
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>API Scope</th>
+                <th>Feature / Purpose</th>
+                <th>Handling &amp; Fallback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>MANAGE_EXTERNAL_STORAGE</code></td>
+                <td>Android 11+ (API 30+)</td>
+                <td><strong>All Files Access:</strong> Required to locate, organize, and allow user-confirmed deletion of non-media shared files across storage (such as public Downloads, documents, obsolete temporary files, and redundant APK installers).</td>
+                <td>Special access granted via Android System Settings. If denied, the app degrades gracefully to standard MediaStore scanning.</td>
+              </tr>
+              <tr>
+                <td><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_MEDIA_AUDIO</code></td>
+                <td>Android 13+ (API 33+)</td>
+                <td><strong>Media Management:</strong> Allows scanning of shared media categories (photos, videos, audio) for storage breakdown and duplicate detection.</td>
+                <td>Standard runtime permission. If denied, corresponding media categories remain empty.</td>
+              </tr>
+              <tr>
+                <td><code>READ_MEDIA_VISUAL_USER_SELECTED</code></td>
+                <td>Android 14+ (API 34+)</td>
+                <td><strong>Partial Photo Access:</strong> Allows users to grant access to only specific selected photos/videos instead of their entire gallery.</td>
+                <td>K-Cleaner respects partial selections and marks scan results as partial without failing.</td>
+              </tr>
+              <tr>
+                <td><code>READ_EXTERNAL_STORAGE</code><br><code>WRITE_EXTERNAL_STORAGE</code></td>
+                <td>Android 10 and below (maxSdk 32 / 29)</td>
+                <td><strong>Legacy Storage Access:</strong> Provides file browsing and user-confirmed deletion on older Android versions.</td>
+                <td>Scattered according to Android API level rules; ignored on modern Android releases.</td>
+              </tr>
+              <tr>
+                <td><code>PACKAGE_USAGE_STATS</code></td>
+                <td>Android 5.0+ (API 21+)</td>
+                <td><strong>Usage Access:</strong> Enables the App Manager to display last-used times and storage footprints, and powers the Data Usage and Process Explorer tools.</td>
+                <td>Special AppOps access granted via Android System Settings. If denied, apps display without last-used timestamps and network traffic cards show unavailable.</td>
+              </tr>
+              <tr>
+                <td><code>REQUEST_DELETE_PACKAGES</code></td>
+                <td>All supported versions</td>
+                <td><strong>App Uninstallation:</strong> Initiates standard system uninstallation dialogs when the user chooses to remove an app via App Manager.</td>
+                <td>Standard permission; every uninstall must be confirmed through the Android system dialog.</td>
+              </tr>
+              <tr>
+                <td><code>POST_NOTIFICATIONS</code></td>
+                <td>Android 13+ (API 33+)</td>
+                <td><strong>Notifications:</strong> Enables periodic cleaning reminders and Quick Boost notification actions when enabled by the user.</td>
+                <td>Runtime permission. Can be toggled off at any time inside the app's Settings screen.</td>
+              </tr>
+              <tr>
+                <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+                <td>All supported versions</td>
+                <td><strong>Reminder Rescheduling:</strong> Reschedules scheduled cleaning reminders after device reboot only when notifications are enabled.</td>
+                <td>Broadcast receiver is unexported and runs only locally on device.</td>
+              </tr>
+              <tr>
+                <td><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td>
+                <td>All supported versions</td>
+                <td><strong>Advertising &amp; Connectivity:</strong> Required by Google Mobile Ads (AdMob) to retrieve ad units and check active network availability.</td>
+                <td>Standard permissions; not used by developer code for custom background telemetry.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>Sensitive APIs Not Declared:</strong> K-Cleaner does <em>not</em> request or access camera, microphone, GPS/location, contacts, phone call logs, SMS messages, calendar entries, biometric credentials, or <code>QUERY_ALL_PACKAGES</code>.
+        </p>
+      </section>
+
+      <!-- 4. Usage Access & Process Insights -->
+      <section id="usage-stats">
+        <h2>4. Usage Access, Process &amp; Data Insights</h2>
+        <p>
+          When you grant the optional <strong>Usage Access</strong> permission (<code>PACKAGE_USAGE_STATS</code>), K-Cleaner accesses standard Android platform APIs to provide diagnostic information:
+        </p>
+        <ul>
+          <li>
+            <strong>Application Last Used Times:</strong> Queries <code>UsageStatsManager</code> locally to help you identify apps you haven't opened in a long time.
+          </li>
+          <li>
+            <strong>Data Usage Monitoring:</strong> Queries <code>NetworkStatsManager</code> to display Wi-Fi and mobile data consumption per application over recent intervals. No network packets, browsing history, URLs, or message payloads are intercepted or recorded.
+          </li>
+          <li>
+            <strong>Process Explorer &amp; Quick Boost:</strong> Inspects active process memory usage via <code>ActivityManager.getRunningAppProcesses()</code> and system memory metrics. Quick Boost terminates background processes using standard Android <code>killBackgroundProcesses()</code> and removes K-Cleaner's own temporary cache files. Reclaimed memory metrics reflect actual measured memory differentials.
+          </li>
+        </ul>
+        <p>
+          All usage data, network metrics, and process statistics remain strictly on your device and are never shared or sent over the Internet.
+        </p>
+      </section>
+
+      <!-- 5. Notifications -->
+      <section id="notifications">
+        <h2>5. Notifications &amp; Reminders</h2>
+        <p>
+          K-Cleaner includes optional background notifications to remind you to review accumulated junk files and keep your device clean.
+        </p>
+        <ul>
+          <li>
+            <strong>Daily Rate Limit:</strong> Notifications are strictly capped at a maximum of <strong>two (2) notifications per calendar day</strong> via our local limiter.
+          </li>
+          <li>
+            <strong>Quiet Hours:</strong> Notifications are automatically suppressed during quiet hours (between 10:00 PM and 7:30 AM local time).
+          </li>
+          <li>
+            <strong>Ad-Free Quick Boost:</strong> When you tap the Quick Boost action directly from an expanded notification, the background cleanup executes immediately without showing an advertisement.
+          </li>
+          <li>
+            <strong>User Control:</strong> You can enable or disable notifications at any time directly in K-Cleaner's <em>Settings &gt; Notifications</em> or via Android System App Settings.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. Advertising -->
+      <section id="advertising">
+        <h2>6. Advertising &amp; Identifiers (Google AdMob)</h2>
+        <p>
+          K-Cleaner is supported by advertising and does not charge subscription fees. To provide free functionality, the Application integrates the <strong>Google Mobile Ads (AdMob) SDK</strong>.
+        </p>
+        <p>
+          Google AdMob and its certified advertising technology partners may automatically collect and process certain information from your device in accordance with applicable laws, your consent choices, and Google's policies. This information may include:
+        </p>
+        <ul>
+          <li><strong>Advertising Identifiers:</strong> Mobile advertising identifiers such as the Google Advertising ID (GAID).</li>
+          <li><strong>Device &amp; Hardware Specifications:</strong> Device model, manufacturer, operating system version, screen dimensions, device language, and carrier.</li>
+          <li><strong>Network Information:</strong> IP address (used to infer coarse geographic region and prevent advertising fraud).</li>
+          <li><strong>Interaction Data:</strong> Ad views, clicks, impressions, and performance metrics.</li>
+          <li><strong>Diagnostic &amp; SDK Telemetry:</strong> Ad crash reports, load times, and diagnostic signals.</li>
+        </ul>
+        <p>
+          For more information on how Google collects and processes advertising information, please visit:
+        </p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+          <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google Uses Information from Sites or Apps That Use Our Services</a></li>
+        </ul>
+      </section>
+
+      <!-- 7. Consent Management -->
+      <section id="consent">
+        <h2>7. Consent Management (Google UMP)</h2>
+        <p>
+          K-Cleaner integrates the <strong>Google User Messaging Platform (UMP) SDK</strong> to support privacy regulations worldwide, including the European General Data Protection Regulation (GDPR), the ePrivacy Directive, UK data privacy laws, and US State privacy frameworks.
+        </p>
+        <ul>
+          <li>
+            <strong>Consent Presentation:</strong> Where legally mandated (such as the European Economic Area and the UK), a consent dialog is presented before personalized advertisements are served.
+          </li>
+          <li>
+            <strong>User Choice:</strong> You have the option to consent to personalized advertising, choose non-personalized ads, or manage individual ad vendor permissions.
+          </li>
+          <li>
+            <strong>Ad Initialization Gating:</strong> Advertisements are not requested until required consent parameters have been gathered or verified.
+          </li>
+          <li>
+            <strong>Revoking or Updating Consent:</strong> You can reset your advertising consent preferences at any time by clearing the app's storage in Android Settings, or managing your Google account ad settings.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 8. Third-Party Service Providers -->
+      <section id="third-parties">
+        <h2>8. Third-Party Service Providers &amp; Data Sharing</h2>
+        <p>
+          We do not sell, rent, or trade your personal information. The only third-party service provider integrated into K-Cleaner is Google for advertising and consent management:
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Service Provider</th>
+                <th>Purpose</th>
+                <th>Data Processed</th>
+                <th>Privacy Policy Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google AdMob</strong> (Google LLC)</td>
+                <td>In-app banner and interstitial advertisement delivery</td>
+                <td>Advertising ID, IP address, device specs, ad engagement data</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google UMP</strong> (Google LLC)</td>
+                <td>User consent gathering and regulatory compliance</td>
+                <td>Consent preferences, regional regulatory status</td>
+                <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Technologies</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>No Other Third-Party SDKs:</strong> K-Cleaner does <em>not</em> integrate Firebase Analytics, Google Analytics, Facebook/Meta SDKs, Crashlytics, Sentry, Mixpanel, AppsFlyer, or any other commercial tracking, analytics, or behavioral surveillance libraries.
+        </p>
+      </section>
+
+      <!-- 9. Network Transmissions -->
+      <section id="network">
+        <h2>9. Network Transmissions &amp; Analytics</h2>
+        <p>
+          K-Cleaner does not operate proprietary backend servers. Outbound network communication from the Application is strictly confined to:
+        </p>
+        <ol>
+          <li>Retrieving advertisement assets and reporting ad impressions through the Google Mobile Ads SDK.</li>
+          <li>Communicating with Google's consent verification servers via the User Messaging Platform SDK.</li>
+        </ol>
+        <p>
+          No user files, storage file lists, folder trees, duplicate reports, installed application inventories, or personal hardware telemetry are ever transmitted across the network by K-Cleaner.
+        </p>
+      </section>
+
+      <!-- 10. Data Retention & User Controls -->
+      <section id="retention">
+        <h2>10. Data Retention, Deletion &amp; User Controls</h2>
+        <p>
+          Because K-Cleaner does not store your files or personal records on external servers, you maintain total ownership and direct custody of your data at all times:
+        </p>
+        <ul>
+          <li>
+            <strong>Local Storage &amp; Preferences:</strong> App preferences (such as your chosen theme mode, language preference, notification toggle, and first-launch status) are stored locally in Android's private <code>SharedPreferences</code> on your device.
+          </li>
+          <li>
+            <strong>Permission Revocation:</strong> You can revoke any granted permission (Storage, Media, Usage Access, Notifications) at any time through <em>Android Settings &gt; Apps &gt; K-Cleaner &gt; Permissions</em>.
+          </li>
+          <li>
+            <strong>Clearing Application Data:</strong> You can completely purge all local settings and cached records by navigating to <em>Android Settings &gt; Apps &gt; K-Cleaner &gt; Storage &gt; Clear Data</em>.
+          </li>
+          <li>
+            <strong>Application Uninstallation:</strong> Uninstalling K-Cleaner immediately and permanently erases all locally stored application preferences, internal temporary caches, and database files from your device.
+          </li>
+          <li>
+            <strong>Resetting Advertising ID:</strong> You can reset or delete your device's Google Advertising ID at any time via <em>Android Settings &gt; Google &gt; Ads &gt; Reset/Delete advertising ID</em>.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 11. Children's Privacy -->
+      <section id="children">
+        <h2>11. Children's Privacy</h2>
+        <p>
+          K-Cleaner is a general audience storage utility application and is not intended or directed to children under the age of 13 (or under 16 in the European Economic Area).
+        </p>
+        <p>
+          We do not knowingly collect, solicit, or process personal data from children. If you are a parent or guardian and believe that your child has provided personal information to third-party advertising services through the app without verified parental consent, please contact us at the email provided below, and we will take immediate steps to address the inquiry.
+        </p>
+      </section>
+
+      <!-- 12. Regional Rights -->
+      <section id="regional">
+        <h2>12. International &amp; Regional Privacy Rights</h2>
+
+        <h3>European Economic Area (EEA) and United Kingdom (GDPR / UK GDPR)</h3>
+        <p>
+          Under the General Data Protection Regulation, individuals in the EEA and UK have the right to:
+        </p>
+        <ul>
+          <li>Request access to, rectification of, or erasure of their personal data.</li>
+          <li>Restrict or object to the processing of personal data.</li>
+          <li>Withdraw previously given consent at any time without affecting the lawfulness of processing based on consent prior to withdrawal.</li>
+        </ul>
+        <p>
+          Because K-Cleaner processes device files locally and stores no personal user data on servers, exercising these rights is directly under your control via the on-device options described in Section 10. For ad-related processing, you can exercise your consent choices via the Google UMP dialog and device ad settings.
+        </p>
+
+        <h3>California and US State Privacy Laws (CCPA / CPRA)</h3>
+        <p>
+          If you reside in California or other US states with comprehensive consumer privacy statutes:
+        </p>
+        <ul>
+          <li><strong>Right to Know and Delete:</strong> You have the right to request disclosure of personal data collected and request deletion. All local data is deletable directly by clearing app storage or uninstalling.</li>
+          <li><strong>Sale or Sharing of Personal Information:</strong> We do not sell your personal information. Third-party advertising partners may process device identifiers for cross-context behavioral advertising, which you may opt out of via Android Settings (Opt out of Ads Personalization).</li>
+          <li><strong>Non-Discrimination:</strong> We do not discriminate against users who exercise their privacy rights.</li>
+        </ul>
+
+        <h3>India (Digital Personal Data Protection Act - DPDP)</h3>
+        <p>
+          In accordance with the Indian DPDP Act, K-Cleaner ensures that on-device processing respects user privacy. File operations are strictly local, and third-party advertising processing is governed by informed user consent and device settings. Users in India may contact the developer for grievance redressal using the contact details below.
+        </p>
+      </section>
+
+      <!-- 13. Security -->
+      <section id="security">
+        <h2>13. Security Safeguards</h2>
+        <p>
+          We employ industry-standard Android security architectures to protect the integrity of the Application:
+        </p>
+        <ul>
+          <li><strong>Local-First Design:</strong> By not operating an external cloud database of user files, the risk of remote server breaches or unauthorized third-party file leakage is eliminated.</li>
+          <li><strong>Least-Privilege Configuration:</strong> Internal application components, custom broadcast receivers, and our <code>FileProvider</code> are configured with <code>android:exported="false"</code> to prevent unauthorized inter-process communication from other apps.</li>
+          <li><strong>Operating System Sandboxing:</strong> Android's application sandbox isolates K-Cleaner's executable code and private data storage from other applications installed on your device.</li>
+        </ul>
+        <p>
+          While we implement robust safeguards, no electronic transmission or storage method is completely impenetrable. We encourage users to maintain up-to-date operating system security patches on their devices.
+        </p>
+      </section>
+
+      <!-- 14. Changes & Contact -->
+      <section id="changes">
+        <h2>14. Changes to This Policy &amp; Contact Information</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect modifications in our features, platform API updates, third-party SDK evolutions, or emerging legal requirements. When updates occur, the <em>"Last Updated"</em> date at the top and bottom of this page will be revised accordingly. We encourage you to review this page periodically.
+        </p>
+
+        <h3>Developer &amp; Privacy Contact</h3>
+        <p>
+          If you have questions, feedback, grievance inquiries, or requests regarding this Privacy Policy or K-Cleaner's data practices, please contact the developer directly:
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Developer:</strong> Deepak Kumar</p>
+          <p><strong>Application:</strong> K-Cleaner (<code>com.deepak.phonecleaner</code>)</p>
+          <p><strong>Privacy &amp; Support Email:</strong> <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></p>
+          <p><strong>WhatsApp Support:</strong> <a href="https://wa.me/918800468480" target="_blank" rel="noopener noreferrer">+91 8800468480</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <p><strong>K-Cleaner Privacy Policy</strong> • Version 1.0</p>
+          <p>Effective Date: October 20, 2026 • Developed by Deepak Kumar</p>
+        </div>
+        <div>
+          <p>Contact: <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
