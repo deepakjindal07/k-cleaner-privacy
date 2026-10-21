@@ -6,281 +6,43 @@
   <meta name="description" content="Privacy Policy for K-Cleaner, an Android device storage and maintenance utility developed by Deepak Kumar.">
   <meta name="author" content="Deepak Kumar">
   <title>Privacy Policy — K-Cleaner</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
+    /* Inline baseline styles to ensure immediate render */
     :root {
-      --color-bg: #ffffff;
-      --color-surface: #f8fafc;
-      --color-border: #e2e8f0;
-      --color-text-main: #0f172a;
-      --color-text-muted: #475569;
-      --color-text-subtle: #64748b;
       --color-primary: #1668fe;
-      --color-primary-dark: #0f4ec2;
-      --color-primary-light: #eff6ff;
-      --color-accent-border: #bfdbfe;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--color-bg);
-      color: var(--color-text-main);
-    }
-
-    body {
-      font-family: var(--font-stack);
-      line-height: 1.7;
-      color: var(--color-text-main);
-      background-color: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 48px 24px 72px;
-    }
-
-    header {
-      border-bottom: 1px solid var(--color-border);
-      padding-bottom: 28px;
-      margin-bottom: 36px;
-    }
-
-    .brand-badge {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--color-primary);
-      background-color: var(--color-primary-light);
-      border: 1px solid var(--color-accent-border);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 800;
-      line-height: 1.25;
-      color: var(--color-text-main);
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 14px;
-      color: var(--color-text-subtle);
-    }
-
-    .meta-item strong { color: var(--color-text-muted); }
-
-    .callout {
-      background-color: var(--color-primary-light);
-      border-left: 4px solid var(--color-primary);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      margin: 28px 0;
-      font-size: 15px;
-      color: var(--color-text-muted);
-    }
-
-    .callout strong { color: var(--color-text-main); }
-
-    .toc {
-      background-color: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      margin: 32px 0 44px;
-    }
-
-    .toc h2 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--color-text-main);
-      margin-bottom: 14px;
-      border: none;
-      padding-bottom: 0;
-    }
-
-    .toc ol {
-      padding-left: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 6px;
-    }
-
-    @media (min-width: 640px) {
-      .toc ol { grid-template-columns: 1fr 1fr; gap: 8px 24px; }
-    }
-
-    .toc a {
-      color: var(--color-primary);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .toc a:hover, .toc a:focus-visible {
-      text-decoration: underline;
-      color: var(--color-primary-dark);
-    }
-
-    section {
-      margin-bottom: 44px;
-      scroll-margin-top: 24px;
-    }
-
-    h2 {
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--color-text-main);
-      border-bottom: 1px solid var(--color-border);
-      padding-bottom: 8px;
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
-    }
-
-    h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--color-text-main);
-      margin: 20px 0 10px;
-    }
-
-    p {
-      margin-bottom: 14px;
-      color: var(--color-text-muted);
-    }
-
-    ul, ol {
-      margin: 12px 0 18px 24px;
-      color: var(--color-text-muted);
-    }
-
-    li { margin-bottom: 8px; }
-    li strong { color: var(--color-text-main); }
-
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 20px 0 24px;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 14px;
-      background-color: #fff;
-    }
-
-    thead {
-      background-color: var(--color-surface);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    th {
-      padding: 12px 16px;
-      font-weight: 600;
-      color: var(--color-text-main);
-    }
-
-    td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--color-border);
-      color: var(--color-text-muted);
-      vertical-align: top;
-    }
-
-    tbody tr:last-child td { border-bottom: none; }
-    tbody tr:hover { background-color: #fbfcfe; }
-
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.88em;
-      background-color: var(--color-surface);
-      border: 1px solid var(--color-border);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: #b91c1c;
-    }
-
-    a {
-      color: var(--color-primary);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    a:hover, a:focus-visible {
-      color: var(--color-primary-dark);
-      text-decoration-thickness: 2px;
-    }
-
-    footer {
-      border-top: 1px solid var(--color-border);
-      padding-top: 32px;
-      margin-top: 60px;
-      font-size: 14px;
-      color: var(--color-text-subtle);
-    }
-
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    @media (min-width: 640px) {
-      .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    .contact-box {
-      background-color: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      margin: 16px 0;
-    }
-
-    .contact-box p { margin-bottom: 6px; }
-    .contact-box p:last-child { margin-bottom: 0; }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 1.85rem; }
-      .container { padding: 28px 16px 48px; }
-      th, td { padding: 10px 12px; }
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
   </style>
 </head>
 <body>
+  <!-- Top Navigation Bar -->
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="site-nav-container">
+      <a href="index.html" class="brand-link" aria-label="K-Cleaner Home">
+        <div class="brand-icon">K</div>
+        <div class="brand-info">
+          <span class="brand-name">K-Cleaner</span>
+          <span class="brand-tagline">Storage &amp; System Utility</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="privacy-policy.html" class="nav-pill active" aria-current="page">Privacy Policy</a></li>
+        <li><a href="agreement.html" class="nav-pill inactive">User Agreement</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container">
-    <header>
+    <header class="doc-header">
       <span class="brand-badge">Privacy Policy</span>
       <h1>K-Cleaner Privacy Policy</h1>
-      <div class="meta-row">
-        <span class="meta-item"><strong>Developer:</strong> Deepak Kumar</span>
-        <span class="meta-item"><strong>Application ID:</strong> <code>com.deepak.phonecleaner</code></span>
-        <span class="meta-item"><strong>Effective Date:</strong> October 20, 2026</span>
-        <span class="meta-item"><strong>Last Updated:</strong> October 20, 2026</span>
-        <span class="meta-item"><strong>Document Version:</strong> 1.1</span>
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Developer:</strong> Deepak Kumar</div>
+        <div class="meta-item"><strong>Application ID:</strong> <code>com.deepak.phonecleaner</code></div>
+        <div class="meta-item"><strong>Effective Date:</strong> October 20, 2026</div>
+        <div class="meta-item"><strong>Last Updated:</strong> October 20, 2026</div>
+        <div class="meta-item"><strong>Document Version:</strong> 1.1</div>
       </div>
     </header>
 
@@ -288,22 +50,23 @@
       <strong>Summary:</strong> K-Cleaner is an on-device storage utility. The app's own file scanning, duplicate detection, and cleanup features are designed to process data locally on your Android device. However, the app includes third-party advertising services that collect and transmit certain device and usage information as described in this policy.
     </div>
 
+    <!-- Table of Contents -->
     <nav class="toc" aria-label="Table of Contents">
       <h2>Table of Contents</h2>
       <ol>
-        <li><a href="#overview">Developer &amp; App Overview</a></li>
-        <li><a href="#file-processing">On-Device File Processing</a></li>
-        <li><a href="#permissions">Android Permissions</a></li>
-        <li><a href="#usage-stats">Usage Access &amp; Device Insights</a></li>
-        <li><a href="#notifications">Notifications &amp; Reminders</a></li>
-        <li><a href="#advertising">Advertising (Google AdMob)</a></li>
-        <li><a href="#consent">Consent Management (Google UMP)</a></li>
-        <li><a href="#third-parties">Third-Party Services &amp; Data Sharing</a></li>
-        <li><a href="#network">Network Transmissions</a></li>
-        <li><a href="#retention">Data Retention &amp; User Controls</a></li>
-        <li><a href="#children">Children's Privacy</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#changes">Changes &amp; Contact</a></li>
+        <li><a href="#overview">1. Developer &amp; App Overview</a></li>
+        <li><a href="#file-processing">2. On-Device File Processing</a></li>
+        <li><a href="#permissions">3. Android Permissions</a></li>
+        <li><a href="#usage-stats">4. Usage Access &amp; Device Insights</a></li>
+        <li><a href="#notifications">5. Notifications &amp; Reminders</a></li>
+        <li><a href="#advertising">6. Advertising (Google AdMob)</a></li>
+        <li><a href="#consent">7. Consent Management (Google UMP)</a></li>
+        <li><a href="#third-parties">8. Third-Party Services &amp; Data Sharing</a></li>
+        <li><a href="#network">9. Network Transmissions</a></li>
+        <li><a href="#retention">10. Data Retention &amp; User Controls</a></li>
+        <li><a href="#children">11. Children's Privacy</a></li>
+        <li><a href="#security">12. Security</a></li>
+        <li><a href="#changes">13. Changes &amp; Contact</a></li>
       </ol>
     </nav>
 
@@ -318,7 +81,7 @@
           K-Cleaner is an Android storage maintenance and file management utility. It helps you review storage utilization, find potential junk files, detect duplicate media, and organize files on your device.
         </p>
         <p>
-          This policy covers both data handled directly by the app and data collected by the third-party SDKs it includes. You are encouraged to review the linked third-party policies for complete details on their practices.
+          This policy covers both data handled directly by the app and data collected by the third-party SDKs it includes. You are encouraged to review the linked third-party policies for complete details on their practices. For terms governing acceptable usage and liability, please review our <a href="agreement.html">User Agreement</a>.
         </p>
       </section>
 
@@ -672,23 +435,25 @@
           <p><strong>Developer:</strong> Deepak Kumar</p>
           <p><strong>Application:</strong> K-Cleaner (<code>com.deepak.phonecleaner</code>)</p>
           <p><strong>Email:</strong> <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/918800468480" target="_blank" rel="noopener noreferrer">+91 8800468480</a></p>
+          <p><strong>WhatsApp Support:</strong> <a href="https://wa.me/918800468480" target="_blank" rel="noopener noreferrer">+91 8800468480</a></p>
         </div>
-
-        <p>
-          Please confirm that the email address and phone number above are correct and monitored before relying on them for privacy inquiries.
-        </p>
       </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="doc-footer">
       <div class="footer-content">
         <div>
           <p><strong>K-Cleaner Privacy Policy</strong> • Version 1.1</p>
-          <p>Effective Date: October 20, 2026 • Last Updated: October 20, 2026 • Developed by Deepak Kumar</p>
+          <p>Effective Date: October 20, 2026 • Developed by Deepak Kumar</p>
+          <p>&copy; 2026 Deepak Kumar. All rights reserved.</p>
         </div>
         <div>
-          <p>Contact: <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></p>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="agreement.html">User Agreement</a></li>
+            <li><a href="mailto:deepak.jindal07@gmail.com">Contact Support</a></li>
+          </ul>
         </div>
       </div>
     </footer>

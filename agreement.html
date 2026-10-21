@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="User Agreement and Terms of Service for K-Cleaner, an Android device storage and maintenance utility developed by Deepak Kumar.">
+  <meta name="author" content="Deepak Kumar">
+  <title>User Agreement — K-Cleaner</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Inline baseline styles to ensure immediate render */
+    :root {
+      --color-primary: #1668fe;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="site-nav-container">
+      <a href="index.html" class="brand-link" aria-label="K-Cleaner Home">
+        <div class="brand-icon">K</div>
+        <div class="brand-info">
+          <span class="brand-name">K-Cleaner</span>
+          <span class="brand-tagline">Storage &amp; System Utility</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="privacy-policy.html" class="nav-pill inactive">Privacy Policy</a></li>
+        <li><a href="agreement.html" class="nav-pill active" aria-current="page">User Agreement</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="doc-header">
+      <span class="brand-badge">Legal Terms</span>
+      <h1>K-Cleaner User Agreement &amp; Terms of Service</h1>
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Developer:</strong> Deepak Kumar</div>
+        <div class="meta-item"><strong>Application ID:</strong> <code>com.deepak.phonecleaner</code></div>
+        <div class="meta-item"><strong>Effective Date:</strong> October 20, 2026</div>
+        <div class="meta-item"><strong>Last Updated:</strong> October 20, 2026</div>
+        <div class="meta-item"><strong>Document Version:</strong> 1.0</div>
+      </div>
+    </header>
+
+    <div class="callout">
+      <strong>Important Summary:</strong> K-Cleaner is an on-device Android storage and device management utility. File scanning, duplicate identification, and storage calculations are performed locally on your device. K-Cleaner never deletes personal files automatically—all cleanup actions require your explicit review and confirmation. By downloading, installing, or using K-Cleaner, you agree to these terms.
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc" aria-label="Table of Contents">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#acceptance">1. Acceptance of Terms &amp; Eligibility</a></li>
+        <li><a href="#services">2. Scope &amp; Nature of Services</a></li>
+        <li><a href="#user-control">3. Local Processing &amp; User File Control</a></li>
+        <li><a href="#permissions">4. Permissions &amp; Platform Boundaries</a></li>
+        <li><a href="#acceptable-use">5. Acceptable Use &amp; Prohibitions</a></li>
+        <li><a href="#advertising">6. Advertising &amp; Third-Party Services</a></li>
+        <li><a href="#intellectual-property">7. Intellectual Property &amp; License</a></li>
+        <li><a href="#disclaimers">8. Disclaimer of Warranties</a></li>
+        <li><a href="#liability">9. Limitation of Liability</a></li>
+        <li><a href="#modifications">10. Modifications &amp; Termination</a></li>
+        <li><a href="#governing-law">11. Governing Law &amp; Jurisdiction</a></li>
+        <li><a href="#contact">12. Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <!-- 1. Acceptance -->
+      <section id="acceptance">
+        <h2>1. Acceptance of Terms &amp; Eligibility</h2>
+        <p>
+          This User Agreement and Terms of Service ("Agreement") constitutes a legally binding agreement between you ("User" or "you") and <strong>Deepak Kumar</strong> ("Developer", "we", "us", or "our"), governing your download, installation, access, and use of the <strong>K-Cleaner</strong> mobile application for Android (package identifier <code>com.deepak.phonecleaner</code>).
+        </p>
+        <p>
+          By tapping "Get Started", proceeding through onboarding, or otherwise accessing or using K-Cleaner, you confirm that you have read, understood, and agreed to be bound by this Agreement and our accompanying <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree to these terms, do not install, access, or use the application.
+        </p>
+        <p>
+          You represent and warrant that you possess the legal capacity to enter into this Agreement under the laws applicable in your jurisdiction.
+        </p>
+      </section>
+
+      <!-- 2. Scope & Nature of Services -->
+      <section id="services">
+        <h2>2. Scope &amp; Nature of Services</h2>
+        <p>
+          K-Cleaner is designed to help Android users understand, organize, and manage device storage. The application provides the following core utilities:
+        </p>
+        <ul>
+          <li><strong>Storage Overview &amp; Categorization:</strong> Analyzes shared storage to display disk utilization across images, videos, audio, documents, archives, and APK packages.</li>
+          <li><strong>Duplicate Media Finder:</strong> Identifies potential duplicate photos, videos, and files using cryptographic content hashing (SHA-256) and file metadata to help you identify redundant copies.</li>
+          <li><strong>Junk File Scanning:</strong> Scans accessible shared directories for temporary files, empty folders, orphaned APK installer packages, and app log files.</li>
+          <li><strong>Apps Manager:</strong> Displays installed applications, their installation date, and storage footprint, allowing you to launch Android's native system uninstallation flow.</li>
+          <li><strong>Device &amp; Battery Insights:</strong> Displays battery temperature, charging health, and RAM utilization heuristics using standard platform system APIs.</li>
+          <li><strong>Quick Boost:</strong> Requests that Android terminate eligible background processes using Android's standard <code>killBackgroundProcesses()</code> API and clears only K-Cleaner's own internal temporary cache files.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Local Processing & User Control -->
+      <section id="user-control">
+        <h2>3. Local Processing &amp; User Responsibility for File Deletion</h2>
+        <p>
+          K-Cleaner is engineered with a strict <strong>local-first</strong> approach:
+        </p>
+        <ul>
+          <li>
+            <strong>Local Analysis:</strong> All file scanning, duplicate hashing, and storage calculations take place directly on your Android device. K-Cleaner's application code does not transmit your personal files, photos, videos, or documents to external servers.
+          </li>
+          <li>
+            <strong>No Automated User-File Deletion:</strong> K-Cleaner does not delete personal files, photos, videos, or downloads automatically without user intervention. All deletion actions require your explicit selection and confirmation.
+          </li>
+          <li>
+            <strong>User Responsibility:</strong> You retain sole responsibility for reviewing file selections prior to confirming permanent deletion. You acknowledge that deleting files, duplicates, or installers is permanent and may not be reversible. We strongly recommend maintaining regular external backups of irreplaceable photos, videos, and critical documents.
+          </li>
+          <li>
+            <strong>App Cache Clearing:</strong> When using the Quick Boost feature, the app cleans only K-Cleaner's own temporary cache files. K-Cleaner does not delete the private caches of other installed applications.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. Permissions & Platform Boundaries -->
+      <section id="permissions">
+        <h2>4. Permissions &amp; Android Platform Constraints</h2>
+        <p>
+          To perform storage maintenance and cleanup, K-Cleaner requests certain Android runtime permissions. Your use of the application is subject to the following platform constraints:
+        </p>
+        <ul>
+          <li>
+            <strong>Optional Grants:</strong> You may grant or decline optional permissions (such as <code>MANAGE_EXTERNAL_STORAGE</code> on Android 11+, granular MediaStore permissions on Android 13+, Usage Access, or Notification permissions). If you decline a permission, features requiring that permission will be disabled or operate with reduced file visibility, while unaffected features remain functional.
+          </li>
+          <li>
+            <strong>Android Security Sandboxing:</strong> In accordance with Android platform security standards, K-Cleaner cannot and does not access, inspect, or clear the private internal sandboxes of other installed applications (such as <code>/data/data/</code> or protected subdirectories under <code>/sdcard/Android/data/</code>).
+          </li>
+          <li>
+            <strong>Process Termination Limitations:</strong> When Process Explorer or Quick Boost requests process termination, it uses Android's standard <code>ActivityManager.killBackgroundProcesses()</code> API. The Android operating system retains ultimate control over process lifecycle and may restart background services as needed. K-Cleaner does not bypass Android platform protections or force-stop critical system processes.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 5. Acceptable Use -->
+      <section id="acceptable-use">
+        <h2>5. Acceptable Use &amp; Prohibitions</h2>
+        <p>
+          You agree to use K-Cleaner solely for lawful personal device maintenance. You agree not to:
+        </p>
+        <ul>
+          <li>Decompile, reverse engineer, disassemble, or attempt to derive the source code of the application, except to the extent permitted by mandatory applicable law.</li>
+          <li>Modify, adapt, translate, or create derivative works based upon the application or its design assets.</li>
+          <li>Circumvent, disable, or tamper with any security-related features, consent management flows, or advertising implementations within the app.</li>
+          <li>Distribute, lease, rent, sublicense, or commercially exploit the application without the express written permission of the Developer.</li>
+          <li>Use the application in any manner that could interfere with, damage, or compromise device integrity or network stability.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Advertising & Third-Party Services -->
+      <section id="advertising">
+        <h2>6. Advertising &amp; Third-Party Services</h2>
+        <p>
+          K-Cleaner is provided to users free of charge. To support ongoing maintenance and development, the application is supported by advertising:
+        </p>
+        <ul>
+          <li><strong>Google AdMob:</strong> The application integrates the Google Mobile Ads SDK (AdMob) to display banner and interstitial advertisements.</li>
+          <li><strong>Consent Management:</strong> Where applicable by law (e.g., in the EEA, UK, or Switzerland), advertising consent is gathered using the Google User Messaging Platform (UMP) SDK prior to serving personalized ads.</li>
+          <li><strong>Third-Party Policies:</strong> Third-party advertising networks may collect certain device identifiers and interaction data as described in our <a href="privacy-policy.html#advertising">Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. We do not control third-party advertisers or external websites linked from ads.</li>
+        </ul>
+      </section>
+
+      <!-- 7. Intellectual Property -->
+      <section id="intellectual-property">
+        <h2>7. Intellectual Property &amp; Limited License</h2>
+        <p>
+          All right, title, and interest in and to K-Cleaner—including but not limited to the codebase, user interface, brand name, graphics, illustrations, icons, and text—are and remain the exclusive intellectual property of <strong>Deepak Kumar</strong> or its licensors.
+        </p>
+        <p>
+          Subject to your compliance with this Agreement, the Developer grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download and use one copy of K-Cleaner on an Android device that you own or control, solely for your personal, non-commercial use.
+        </p>
+      </section>
+
+      <!-- 8. Disclaimers -->
+      <section id="disclaimers">
+        <h2>8. Disclaimer of Warranties</h2>
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, K-CLEANER IS PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE.
+        </p>
+        <p>
+          WITHOUT LIMITING THE FOREGOING, THE DEVELOPER EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT:
+        </p>
+        <ul>
+          <li>THE APPLICATION WILL MEET ALL YOUR SPECIFIC REQUIREMENTS OR EXPECTATIONS;</li>
+          <li>OPERATION OF THE APPLICATION WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE;</li>
+          <li>SPECIFIC QUANTITIES OF STORAGE SPACE OR DEVICE MEMORY WILL BE FREED; OR</li>
+          <li>ANY DEFECTS IN THE APPLICATION WILL BE CORRECTED IMMEDIATELY.</li>
+        </ul>
+      </section>
+
+      <!-- 9. Liability -->
+      <section id="liability">
+        <h2>9. Limitation of Liability</h2>
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL DEEPAK KUMAR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR:
+        </p>
+        <ul>
+          <li>LOSS OF DATA, FILES, PHOTOS, VIDEOS, OR OTHER STORED INFORMATION;</li>
+          <li>LOSS OF PROFITS, REVENUE, GOODWILL, OR BUSINESS OPPORTUNITY;</li>
+          <li>DEVICE MALFUNCTION, SYSTEM INSTABILITY, OR HARDWARE IMPAIRMENT; OR</li>
+          <li>ANY OTHER INTANGIBLE LOSSES RESULTING FROM YOUR ACCESS TO, USE OF, OR INABILITY TO USE THE APPLICATION, OR FROM ANY ACTIONS (INCLUDING FILE DELETIONS) TAKEN BY YOU WITHIN THE APPLICATION.</li>
+        </ul>
+        <p>
+          BECAUSE YOU MAINTAIN SOLE CONTROL OVER FILE SELECTIONS AND MUST EXPLICITLY CONFIRM DELETION ACTIONS, YOU AGREE THAT THE DEVELOPER SHALL NOT BE LIABLE FOR ANY UNINTENDED DELETION OF DATA AUTHORIZED THROUGH YOUR DEVICE.
+        </p>
+      </section>
+
+      <!-- 10. Modifications -->
+      <section id="modifications">
+        <h2>10. Modifications &amp; Termination</h2>
+        <p>
+          The Developer reserves the right to update, modify, suspend, or discontinue any feature, tool, or aspect of K-Cleaner at any time without prior notice or liability.
+        </p>
+        <p>
+          We may amend this Agreement periodically to reflect changes in our services, applicable legal requirements, or operating system capabilities. When changes are made, the "Last Updated" date at the top of this document will be updated. Continued use of K-Cleaner following the posting of revised terms constitutes your acceptance of the amended Agreement.
+        </p>
+        <p>
+          You may terminate this Agreement at any time simply by uninstalling the application and ceasing all use.
+        </p>
+      </section>
+
+      <!-- 11. Governing Law -->
+      <section id="governing-law">
+        <h2>11. Governing Law &amp; Jurisdiction</h2>
+        <p>
+          This Agreement shall be governed by, construed, and enforced in accordance with the laws of <strong>India</strong>, without giving effect to any principles of conflicts of law.
+        </p>
+        <p>
+          Any dispute, controversy, or claim arising out of or relating to this Agreement or your use of K-Cleaner shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Delhi, India</strong>.
+        </p>
+      </section>
+
+      <!-- 12. Contact -->
+      <section id="contact">
+        <h2>12. Contact Information</h2>
+        <p>
+          If you have any questions, feedback, or inquiries regarding this User Agreement, please contact the developer:
+        </p>
+        <div class="contact-box">
+          <p><strong>Developer:</strong> Deepak Kumar</p>
+          <p><strong>Application:</strong> K-Cleaner (<code>com.deepak.phonecleaner</code>)</p>
+          <p><strong>Email:</strong> <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></p>
+          <p><strong>WhatsApp Support:</strong> <a href="https://wa.me/918800468480" target="_blank" rel="noopener noreferrer">+91 8800468480</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div class="footer-content">
+        <div>
+          <p><strong>K-Cleaner User Agreement</strong> • Version 1.0</p>
+          <p>Effective Date: October 20, 2026 • Developed by Deepak Kumar</p>
+          <p>&copy; 2026 Deepak Kumar. All rights reserved.</p>
+        </div>
+        <div>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="agreement.html">User Agreement</a></li>
+            <li><a href="mailto:deepak.jindal07@gmail.com">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
