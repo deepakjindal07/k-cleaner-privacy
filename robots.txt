@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kad-labs.com/sitemap.xml
