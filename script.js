@@ -43,22 +43,104 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Phone mockup screenshot switcher (if switcher buttons exist)
-  const previewTabs = document.querySelectorAll('[data-preview-target]');
-  const previewScreen = document.querySelector('.phone-screen img');
+  // 3. Featured Phone Mockup Carousel
+  const sliderTrack = document.getElementById('phone-slider-track');
+  const prevBtn = document.getElementById('mockup-prev');
+  const nextBtn = document.getElementById('mockup-next');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const pillTitle = document.getElementById('pill-title');
+  const pillDesc = document.getElementById('pill-desc');
+  const pillIcon = document.getElementById('pill-icon');
 
-  if (previewTabs.length && previewScreen) {
-    previewTabs.forEach((tab) => {
-      tab.addEventListener('click', (e) => {
+  if (sliderTrack) {
+    const slides = sliderTrack.querySelectorAll('.phone-slide');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    const pillData = [
+      {
+        icon: '⚡',
+        title: 'Storage & Device Clarity',
+        desc: 'Transparent scan &middot; On-device control'
+      },
+      {
+        icon: '📁',
+        title: 'File & Duplicate Discovery',
+        desc: 'Categorized breakdown &middot; Duplicate detection'
+      },
+      {
+        icon: '🔋',
+        title: 'Telemetry & App Diagnostics',
+        desc: 'Battery health &middot; Data monitor &middot; App telemetry'
+      }
+    ];
+
+    const updateCarousel = (index) => {
+      currentIndex = (index + totalSlides) % totalSlides;
+      sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentIndex);
+      });
+
+      dots.forEach((dot, idx) => {
+        const isActive = idx === currentIndex;
+        dot.classList.toggle('active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      if (pillData[currentIndex]) {
+        if (pillIcon) pillIcon.textContent = pillData[currentIndex].icon;
+        if (pillTitle) pillTitle.textContent = pillData[currentIndex].title;
+        if (pillDesc) pillDesc.innerHTML = pillData[currentIndex].desc;
+      }
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        previewTabs.forEach((t) => t.classList.remove('active'));
-        tab.classList.add('active');
-        const newSrc = tab.getAttribute('data-preview-target');
-        if (newSrc) {
-          previewScreen.src = newSrc;
+        updateCarousel(currentIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateCarousel(currentIndex + 1);
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetIndex = parseInt(dot.getAttribute('data-index'), 10);
+        if (!isNaN(targetIndex)) {
+          updateCarousel(targetIndex);
         }
       });
     });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const phoneScreen = document.getElementById('phone-screen');
+    if (phoneScreen) {
+      phoneScreen.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      phoneScreen.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            updateCarousel(currentIndex + 1); // swipe left
+          } else {
+            updateCarousel(currentIndex - 1); // swipe right
+          }
+        }
+      }, { passive: true });
+    }
   }
 
   // 4. Copy email helper

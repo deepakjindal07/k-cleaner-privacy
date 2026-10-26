@@ -259,19 +259,58 @@
       <article class="featured-card">
         <!-- Interactive Smartphone Preview Mockup -->
         <div class="featured-visual">
-          <div class="phone-mockup-wrapper">
-            <div class="phone-frame">
-              <div class="phone-notch" aria-hidden="true"></div>
-              <div class="phone-screen">
-                <img src="assets/kcleaner-home-screen.png" alt="K-Cleaner storage dashboard showing storage metrics and utilities" loading="lazy">
+          <div class="phone-carousel-container">
+            <!-- Prev Arrow Button -->
+            <button type="button" class="carousel-arrow carousel-prev" id="mockup-prev" aria-label="Previous screenshot">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+
+            <!-- Smartphone Frame -->
+            <div class="phone-mockup-wrapper">
+              <div class="phone-frame">
+                <div class="phone-notch" aria-hidden="true"></div>
+                <div class="phone-screen" id="phone-screen">
+                  <div class="phone-slider-track" id="phone-slider-track">
+                    <!-- Slide 1: Cleaner Dashboard -->
+                    <div class="phone-slide active" data-title="Storage &amp; Device Clarity" data-desc="Transparent scan &middot; On-device control">
+                      <img src="assets/kcleaner-home-screen.png" alt="K-Cleaner storage dashboard showing storage metrics and utilities" loading="lazy">
+                    </div>
+                    <!-- Slide 2: File Explorer -->
+                    <div class="phone-slide" data-title="File &amp; Duplicate Discovery" data-desc="Categorized breakdown &middot; Duplicate detection">
+                      <img src="assets/kcleaner-files-screen.png" alt="K-Cleaner file explorer showing category breakdown and duplicate finder" loading="lazy">
+                    </div>
+                    <!-- Slide 3: System Diagnostics -->
+                    <div class="phone-slide" data-title="Telemetry &amp; App Diagnostics" data-desc="Battery health &middot; Data monitor &middot; App telemetry">
+                      <img src="assets/kcleaner-tools-screen.png" alt="K-Cleaner diagnostics showing battery telemetry and app manager" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Dots Indicator -->
+              <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="K-Cleaner screen switcher">
+                <button type="button" class="carousel-dot active" role="tab" aria-selected="true" data-index="0" aria-label="Slide 1: Storage Cleaner"></button>
+                <button type="button" class="carousel-dot" role="tab" aria-selected="false" data-index="1" aria-label="Slide 2: File Explorer"></button>
+                <button type="button" class="carousel-dot" role="tab" aria-selected="false" data-index="2" aria-label="Slide 3: System Diagnostics"></button>
               </div>
             </div>
+
+            <!-- Next Arrow Button -->
+            <button type="button" class="carousel-arrow carousel-next" id="mockup-next" aria-label="Next screenshot">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
           </div>
-          <div class="phone-floating-pill">
-            <div class="pill-icon" aria-hidden="true">⚡</div>
+
+          <!-- Dynamic Floating Pill syncing with active slide -->
+          <div class="phone-floating-pill" id="phone-floating-pill">
+            <div class="pill-icon" id="pill-icon" aria-hidden="true">⚡</div>
             <div>
-              <strong>Storage &amp; Device Clarity</strong>
-              <div style="font-size: 10px; color: var(--text-muted); font-weight: normal;">Transparent scan &middot; On-device control</div>
+              <strong id="pill-title">Storage &amp; Device Clarity</strong>
+              <div id="pill-desc" style="font-size: 10px; color: var(--text-muted); font-weight: normal;">Transparent scan &middot; On-device control</div>
             </div>
           </div>
         </div>
@@ -338,6 +377,47 @@
           </div>
         </div>
       </article>
+
+      <!-- Visual Deep Dive / Core App Capabilities -->
+      <div class="kcleaner-deep-dive">
+        <div class="deep-dive-head">
+          <div class="eyebrow">SCREEN-BY-SCREEN TOUR</div>
+          <h3>Engineered for transparency, privacy, and speed</h3>
+          <p>Explore the three core pillars built directly into K-Cleaner.</p>
+        </div>
+        <div class="promo-grid">
+          <article class="promo-card">
+            <div class="promo-img-wrap">
+              <img src="assets/kcleaner-panel-cleaner.png" alt="Clean up and stay organized with K-Cleaner storage tools" loading="lazy">
+            </div>
+            <div class="promo-card-body">
+              <span class="promo-tag">01 / STORAGE SCAN</span>
+              <h4>Clean Up &amp; Stay Organized</h4>
+              <p>Accurate junk scanning, real-time memory breakdown, and transparent removal of temporary app caches without false claims.</p>
+            </div>
+          </article>
+          <article class="promo-card">
+            <div class="promo-img-wrap">
+              <img src="assets/kcleaner-panel-files.png" alt="Explore files and duplicate finder in K-Cleaner" loading="lazy">
+            </div>
+            <div class="promo-card-body">
+              <span class="promo-tag">02 / FILE EXPLORER</span>
+              <h4>Explore &amp; Manage Files</h4>
+              <p>Smart category breakdown across images, videos, audio, and documents, plus an intelligent duplicate finder to recover wasted space.</p>
+            </div>
+          </article>
+          <article class="promo-card">
+            <div class="promo-img-wrap">
+              <img src="assets/kcleaner-panel-tools.png" alt="Device diagnostics and battery telemetry in K-Cleaner" loading="lazy">
+            </div>
+            <div class="promo-card-body">
+              <span class="promo-tag">03 / DIAGNOSTICS</span>
+              <h4>Keep Your Device Healthy</h4>
+              <p>Live battery telemetry (temperature, voltage, charging status), Wi-Fi and mobile data monitor, and comprehensive app manager.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Section 4.D: Our Apps / On The Workbench -->
@@ -355,17 +435,25 @@
         </p>
 
         <div class="app-grid">
-          <!-- 1. MindFlow -->
-          <article class="app-card">
-            <div class="app-card-top">
-              <div class="app-icon icon-lilac" aria-hidden="true">◉</div>
-              <span class="app-status-tag">IN DEVELOPMENT</span>
+          <!-- 1. MindFlow (Featured Concept) -->
+          <article class="app-card app-card-featured">
+            <div class="app-card-media">
+              <img src="assets/mindflow-showcase.jpg" alt="MindFlow ambient audio and focus app interface on smartphone mockup" loading="lazy">
+              <div class="media-overlay">
+                <span class="preview-badge">Early Concept UI &middot; Audio Player</span>
+              </div>
             </div>
-            <h3>MindFlow</h3>
-            <p>Focus, relaxation, and ambient audio experiences designed for calm, distraction-free work and study sessions.</p>
-            <div class="app-card-foot">
-              <span>Focus &amp; Wellbeing</span>
-              <span aria-hidden="true">↗</span>
+            <div class="app-card-content">
+              <div class="app-card-top">
+                <div class="app-icon icon-lilac" aria-hidden="true">◉</div>
+                <span class="app-status-tag">IN DEVELOPMENT</span>
+              </div>
+              <h3>MindFlow</h3>
+              <p>Focus, relaxation, and ambient audio experiences designed for calm, distraction-free work and study sessions. Features curated natural soundscapes and mood-adaptive audio.</p>
+              <div class="app-card-foot">
+                <span>Focus &amp; Wellbeing &middot; Audio</span>
+                <span aria-hidden="true">↗</span>
+              </div>
             </div>
           </article>
 
