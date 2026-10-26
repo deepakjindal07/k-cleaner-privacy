@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join as Beta Tester — K-Cleaner Android | KAD Labs</title>
+  <meta name="description" content="Apply to join the official K-Cleaner Android Closed Beta Testing Program. Test upcoming storage management tools, report feedback, and help shape our release.">
+  <meta name="author" content="Deepak Kumar">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Supabase Official JS Client from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+</head>
+<body class="legal-body">
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="site-nav-container">
+      <a href="index.html" class="brand-link" aria-label="KAD Labs Home">
+        <div class="brand-icon">K</div>
+        <div class="brand-info">
+          <span class="brand-name">KAD Labs</span>
+          <span class="brand-tagline">Apps &middot; Tools &middot; Innovation</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Quick Links">
+        <a href="index.html" class="nav-pill inactive">Home</a>
+        <a href="index.html#featured" class="nav-pill inactive">K-Cleaner</a>
+        <a href="tester.html" class="nav-pill active">Join Beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container tester-container">
+    
+    <!-- Hero Header -->
+    <header class="doc-header tester-header">
+      <div class="brand-badge">
+        <span aria-hidden="true">✦</span> K-CLEANER CLOSED TESTING PROGRAM
+      </div>
+      <h1>Help Shape K-Cleaner.</h1>
+      <p class="tester-lead">
+        We are actively looking for Android enthusiasts to test upcoming builds of <strong>K-Cleaner</strong>. As a beta tester, you will get early access to new storage utilities, provide direct feedback to our development team, and help us ensure rock-solid stability before public release on Google Play.
+      </p>
+
+      <div class="tester-pillars">
+        <div class="pillar-card">
+          <div class="pillar-icon">⚡</div>
+          <div>
+            <strong>Early Access Builds</strong>
+            <p>Try new storage scans, duplicate discovery, and battery diagnostics before public launch.</p>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🔒</div>
+          <div>
+            <strong>Strict Privacy Guarantee</strong>
+            <p>Your details are used solely to register you on Google Play Console closed testing track. Never sold or shared.</p>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">💬</div>
+          <div>
+            <strong>Direct Developer Line</strong>
+            <p>Report bugs and suggest features directly to Deepak Kumar and the KAD Labs engineering team.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Registration Section -->
+    <section class="tester-form-section">
+      
+      <!-- Registration Form Card -->
+      <div class="tester-form-card" id="formCard">
+        <div class="form-card-head">
+          <h2>Beta Tester Application</h2>
+          <p>Please enter your details below. Your Google account will be added to our closed testing list on Google Play Console.</p>
+        </div>
+
+        <form id="betaRegForm" novalidate>
+          
+          <!-- Section 1: Personal Identity -->
+          <div class="form-section-group">
+            <h3 class="form-group-title">1. Personal Information</h3>
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fullName">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Deepak Kumar" autocomplete="name" required>
+                <span class="field-error" id="fullNameError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Google Play Email Address <span class="required-star">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your.name@gmail.com" autocomplete="email" required>
+                <span class="field-hint">Must be the Google account linked to your Android device to receive the Play Store testing invite.</span>
+                <span class="field-error" id="emailError" aria-live="polite"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Device & WhatsApp -->
+          <div class="form-section-group">
+            <h3 class="form-group-title">2. Android Device &amp; Contact</h3>
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phoneNumber">WhatsApp / Phone Number <span class="required-star">*</span></label>
+                <div class="phone-input-group">
+                  <select id="countryCode" name="countryCode" aria-label="Country Code">
+                    <option value="+91" selected>🇮🇳 +91 (India)</option>
+                    <option value="+1">🇺🇸 +1 (USA / Canada)</option>
+                    <option value="+44">🇬🇧 +44 (UK)</option>
+                    <option value="+65">🇸🇬 +65 (Singapore)</option>
+                    <option value="+971">🇦🇪 +971 (UAE)</option>
+                    <option value="+61">🇦🇺 +61 (Australia)</option>
+                    <option value="+49">🇩🇪 +49 (Germany)</option>
+                    <option value="+33">🇫🇷 +33 (France)</option>
+                    <option value="+81">🇯🇵 +81 (Japan)</option>
+                    <option value="+60">🇲🇾 +60 (Malaysia)</option>
+                    <option value="+62">🇮🇩 +62 (Indonesia)</option>
+                    <option value="+880">🇧🇩 +880 (Bangladesh)</option>
+                    <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                    <option value="+977">🇳🇵 +977 (Nepal)</option>
+                    <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                    <option value="+27">🇿🇦 +27 (South Africa)</option>
+                    <option value="+55">🇧🇷 +55 (Brazil)</option>
+                  </select>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="98765 43210" autocomplete="tel" required>
+                </div>
+                <span class="field-hint">Used strictly for major beta build updates and tester coordination.</span>
+                <span class="field-error" id="phoneError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="androidVersion">Primary Android Version <span class="required-star">*</span></label>
+                <select id="androidVersion" name="androidVersion" required>
+                  <option value="" disabled selected>Select your Android OS Version</option>
+                  <option value="Android 15">Android 15 (Vanilla Ice Cream)</option>
+                  <option value="Android 14">Android 14 (Upside Down Cake)</option>
+                  <option value="Android 13">Android 13 (Tiramisu)</option>
+                  <option value="Android 12">Android 12 / 12L (Snow Cone)</option>
+                  <option value="Android 11">Android 11 (Red Velvet Cake)</option>
+                  <option value="Android 10">Android 10 (Quince Tart)</option>
+                  <option value="Android 9">Android 9.0 (Pie)</option>
+                  <option value="Android 8">Android 8.0 / 8.1 (Oreo)</option>
+                  <option value="Other">Other / Custom ROM</option>
+                </select>
+                <span class="field-error" id="androidVersionError" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-top: 14px;">
+              <label for="deviceModel">Device Model &amp; Manufacturer (Optional)</label>
+              <input type="text" id="deviceModel" name="deviceModel" placeholder="e.g. Samsung Galaxy S24, Google Pixel 8, OnePlus 12, Xiaomi 13">
+              <span class="field-hint">Helps us test compatibility across different hardware makers.</span>
+            </div>
+          </div>
+
+          <!-- Section 3: Areas of Interest -->
+          <div class="form-section-group">
+            <h3 class="form-group-title">3. What features would you like to test most?</h3>
+            <div class="tester-checkbox-grid">
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interests" value="Storage & Junk Clean" checked>
+                <span>Storage Overview &amp; Junk Cleanup</span>
+              </label>
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interests" value="Duplicate Finder" checked>
+                <span>Duplicate File Discovery</span>
+              </label>
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interests" value="Battery Diagnostics" checked>
+                <span>Battery Telemetry &amp; System Health</span>
+              </label>
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interests" value="Quick Boost">
+                <span>Quick Boost &amp; Memory Shortcuts</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Section 4: Consent & Terms -->
+          <div class="form-section-group">
+            <h3 class="form-group-title">4. Testing Agreement &amp; Disclosures</h3>
+            
+            <div class="consent-block">
+              <label class="consent-label">
+                <input type="checkbox" id="termsAgreed" required>
+                <span>I volunteer to participate in the K-Cleaner Android Closed Beta Testing Program. I understand this is an unpaid, voluntary testing initiative and agree to adhere to the <a href="beta-terms.html" target="_blank">Beta Testing Terms</a>.</span>
+              </label>
+
+              <label class="consent-label">
+                <input type="checkbox" id="privacyAgreed" required>
+                <span>I have read and agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>. I understand my Google Play email will be used exclusively to send the Google Play closed testing opt-in link.</span>
+              </label>
+              <span class="field-error" id="consentError" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <!-- Form Global Alert Box -->
+          <div class="form-alert hidden" id="formAlert" role="alert"></div>
+
+          <!-- Submit Button -->
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-large">
+              <span>Submit Beta Application</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </button>
+            <p class="submit-note">
+              No fees or payments required. By submitting, your application will be saved securely to our testing queue.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Confirmation Card (Hidden by Default) -->
+      <div class="success-card hidden" id="successCard" aria-live="polite">
+        <div class="success-icon-badge" aria-hidden="true">✓</div>
+        <h2>Application Submitted Successfully!</h2>
+        <p class="success-subtitle">
+          Thank you for volunteering to test K-Cleaner. Your application has been logged in our testing database.
+        </p>
+
+        <div class="registration-id-box">
+          <span class="id-label">YOUR TESTER REGISTRATION ID</span>
+          <div class="id-row">
+            <strong id="regIdDisplay">KCB-XXXXXX</strong>
+            <button type="button" class="btn-copy" id="copyIdBtn" aria-label="Copy Registration ID">
+              Copy ID
+            </button>
+          </div>
+        </div>
+
+        <div class="success-summary-card">
+          <h4>Application Summary</h4>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <span>Applicant Name:</span>
+              <strong id="summaryName">—</strong>
+            </div>
+            <div class="summary-item">
+              <span>Google Play Email:</span>
+              <strong id="summaryEmail">—</strong>
+            </div>
+            <div class="summary-item">
+              <span>Device &amp; OS:</span>
+              <strong id="summaryVersion">—</strong>
+            </div>
+            <div class="summary-item">
+              <span>Status:</span>
+              <strong class="status-pending" id="summaryStatus">Pending Google Play Invite</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="next-steps-card">
+          <h4>What Happens Next?</h4>
+          <ol class="next-steps-list">
+            <li>
+              <strong>Review &amp; Whitelisting:</strong> Our engineering team reviews device profiles and adds your Google account to the closed testing track on Google Play Console.
+            </li>
+            <li>
+              <strong>Google Play Invite:</strong> You will receive an official Google Play opt-in link directly to your registered email address.
+            </li>
+            <li>
+              <strong>Download &amp; Test:</strong> Click the opt-in link, install K-Cleaner Beta through Google Play Store, and explore the app!
+            </li>
+          </ol>
+        </div>
+
+        <div class="success-actions">
+          <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+          <button type="button" class="btn btn-secondary" id="registerAnotherBtn">Submit Another Device</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Check Application Status Section -->
+    <section class="status-lookup-section">
+      <div class="status-lookup-card">
+        <div class="status-lookup-head">
+          <h3>Already Applied? Check Your Status</h3>
+          <p>Enter your Google Play email or Registration ID to look up your testing queue status.</p>
+        </div>
+        <form class="status-lookup-form" id="statusForm">
+          <input type="text" id="statusQuery" placeholder="your.name@gmail.com or Registration ID" required>
+          <button type="submit" class="btn btn-primary" id="statusLookupBtn">Check Status</button>
+        </form>
+        <div class="status-result hidden" id="statusResult" aria-live="polite"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-top">
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand" aria-label="KAD Labs homepage">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span class="brand-text">KAD <b>Labs</b></span>
+        </a>
+        <p>
+          Apps &middot; Tools &middot; Innovation. Practical digital products designed to simplify everyday tasks and make technology more useful.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#apps">Our Apps</a></li>
+          <li><a href="index.html#featured">K-Cleaner (Featured)</a></li>
+          <li><a href="index.html#approach">Our Approach</a></li>
+          <li><a href="index.html#about">About Studio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="index.html#featured">K-Cleaner (Android)</a></li>
+          <li><a href="tester.html">Join as Beta Tester</a></li>
+          <li><a href="index.html#apps">MindFlow</a></li>
+          <li><a href="index.html#apps">ChartLens AI</a></li>
+          <li><a href="index.html#apps">FileNest</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal &amp; Privacy</h4>
+        <ul>
+          <li><a href="privacy.html">Website Privacy Policy</a></li>
+          <li><a href="terms.html">Website Terms &amp; Conditions</a></li>
+          <li><a href="privacy-policy.html">K-Cleaner App Privacy</a></li>
+          <li><a href="agreement.html">K-Cleaner User Agreement</a></li>
+          <li><a href="beta-terms.html">Beta Testing Terms</a></li>
+          <li><a href="tester.html" style="color: var(--text-main); font-weight: 700;">Join as Beta Tester &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <div>
+        &copy; <span id="year">2026</span> KAD Labs. All rights reserved.
+      </div>
+      <div>
+        Founded by Deepak Kumar &middot; Independent software studio
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tester Registration Logic Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Supabase Client Setup
+      const SUPABASE_PROJECT_URL = 'https://hzntgdsidtszzodelbfp.supabase.co';
+      const SUPABASE_ANON_KEY = 'sb_publishable_uMaD7EraCp9Po7tNmB7MTQ_O9qvhvK3';
+
+      let supabase = null;
+      if (window.supabase && typeof window.supabase.createClient === 'function') {
+        try {
+          supabase = window.supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_ANON_KEY, {
+            auth: { persistSession: false }
+          });
+        } catch (e) {
+          console.warn('[Supabase] Initialization notice:', e);
+        }
+      }
+
+      // Elements
+      const form = document.getElementById('betaRegForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const formCard = document.getElementById('formCard');
+      const successCard = document.getElementById('successCard');
+      const formAlert = document.getElementById('formAlert');
+
+      const fullName = document.getElementById('fullName');
+      const email = document.getElementById('email');
+      const countryCode = document.getElementById('countryCode');
+      const phoneNumber = document.getElementById('phoneNumber');
+      const androidVersion = document.getElementById('androidVersion');
+      const deviceModel = document.getElementById('deviceModel');
+      const termsAgreed = document.getElementById('termsAgreed');
+      const privacyAgreed = document.getElementById('privacyAgreed');
+
+      const fullNameError = document.getElementById('fullNameError');
+      const emailError = document.getElementById('emailError');
+      const phoneError = document.getElementById('phoneError');
+      const androidVersionError = document.getElementById('androidVersionError');
+      const consentError = document.getElementById('consentError');
+
+      const regIdDisplay = document.getElementById('regIdDisplay');
+      const summaryName = document.getElementById('summaryName');
+      const summaryEmail = document.getElementById('summaryEmail');
+      const summaryVersion = document.getElementById('summaryVersion');
+      const copyIdBtn = document.getElementById('copyIdBtn');
+      const registerAnotherBtn = document.getElementById('registerAnotherBtn');
+
+      function clearErrors() {
+        fullNameError.textContent = '';
+        emailError.textContent = '';
+        phoneError.textContent = '';
+        androidVersionError.textContent = '';
+        consentError.textContent = '';
+        formAlert.classList.add('hidden');
+        formAlert.textContent = '';
+        formAlert.className = 'form-alert hidden';
+      }
+
+      function showAlert(msg, isError = true) {
+        formAlert.textContent = msg;
+        formAlert.className = isError ? 'form-alert alert-error' : 'form-alert alert-success';
+        formAlert.classList.remove('hidden');
+        formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      function validate() {
+        clearErrors();
+        let valid = true;
+
+        if (!fullName.value.trim() || fullName.value.trim().length < 2) {
+          fullNameError.textContent = 'Please provide your full name (minimum 2 characters).';
+          valid = false;
+        }
+
+        const emailVal = email.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailVal || !emailRegex.test(emailVal)) {
+          emailError.textContent = 'Please enter a valid Google Play email address.';
+          valid = false;
+        }
+
+        const phoneVal = phoneNumber.value.trim().replace(/\D/g, '');
+        if (!phoneVal || phoneVal.length < 6 || phoneVal.length > 15) {
+          phoneError.textContent = 'Please enter a valid phone number (6-15 digits).';
+          valid = false;
+        }
+
+        if (!androidVersion.value) {
+          androidVersionError.textContent = 'Please select your primary Android version.';
+          valid = false;
+        }
+
+        if (!termsAgreed.checked || !privacyAgreed.checked) {
+          consentError.textContent = 'You must agree to the Beta Testing Terms and Privacy Policy to participate.';
+          valid = false;
+        }
+
+        return valid;
+      }
+
+      // Form Submission
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!validate()) return;
+
+        const nameVal = fullName.value.trim();
+        const emailVal = email.value.trim().toLowerCase();
+        const codeVal = countryCode.value;
+        const phoneVal = phoneNumber.value.trim();
+        const versionVal = androidVersion.value;
+        const modelVal = deviceModel.value.trim();
+
+        // Collect checked interests
+        const interestBoxes = form.querySelectorAll('input[name="interests"]:checked');
+        const interests = Array.from(interestBoxes).map(b => b.value);
+
+        // Generate friendly registration identifier
+        const randomHex = Math.random().toString(36).substring(2, 8).toUpperCase();
+        const friendlyId = 'KCB-' + randomHex;
+        const uuid = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : '00000000-0000-4000-8000-' + randomHex.padEnd(12, '0');
+        const now = new Date().toISOString();
+
+        const customVersionStr = modelVal ? `${modelVal} (${versionVal})` : versionVal;
+        const adminNotes = `Website Beta Application | RegId: ${friendlyId} | Interests: ${interests.join(', ')}`;
+
+        // Build Database Record for Supabase
+        const record = {
+          id: uuid,
+          full_name: nameVal,
+          email: emailVal,
+          phone_number: `${codeVal} ${phoneVal}`,
+          android_version: versionVal,
+          custom_version: customVersionStr,
+          registration_status: 'pending',
+          terms_version: 'v1.0',
+          terms_accepted_at: now,
+          privacy_version: 'v1.1',
+          privacy_consent_at: now,
+          user_agent: navigator.userAgent,
+          admin_notes: adminNotes,
+          deletion_status: 'active'
+        };
+
+        submitBtn.disabled = true;
+        const originalBtnHtml = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Submitting application...</span>';
+
+        try {
+          if (!supabase) {
+            throw new Error('Supabase client is not available. Please verify your internet connection.');
+          }
+
+          // Direct Supabase insert
+          const { error } = await supabase
+            .from('beta_testers')
+            .insert(record);
+
+          if (error) {
+            if (error.code === '23505' || error.message?.includes('duplicate') || error.message?.includes('unique')) {
+              showAlert('This Google Play email is already registered in the K-Cleaner beta program. If you need to update your details, please contact us.');
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnHtml;
+              return;
+            }
+            throw error;
+          }
+
+          // Registration successful! Display confirmation card
+          formCard.classList.add('hidden');
+          successCard.classList.remove('hidden');
+          regIdDisplay.textContent = friendlyId;
+          summaryName.textContent = nameVal;
+          summaryEmail.textContent = emailVal;
+          summaryVersion.textContent = customVersionStr;
+          successCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // Also save in localStorage for local convenience
+          try {
+            const userSubmissions = JSON.parse(localStorage.getItem('kcleaner_beta_regs') || '[]');
+            userSubmissions.push({ regId: friendlyId, email: emailVal, date: now });
+            localStorage.setItem('kcleaner_beta_regs', JSON.stringify(userSubmissions));
+          } catch (e) {}
+
+        } catch (err) {
+          console.error('[Registration Error]', err);
+          showAlert(`Submission error: ${err.message || 'Unable to save details to database. Please check your connection and try again.'}`);
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      });
+
+      // Copy Reg ID button
+      if (copyIdBtn) {
+        copyIdBtn.addEventListener('click', async () => {
+          const text = regIdDisplay.textContent;
+          try {
+            await navigator.clipboard.writeText(text);
+            const orig = copyIdBtn.textContent;
+            copyIdBtn.textContent = 'Copied!';
+            setTimeout(() => { copyIdBtn.textContent = orig; }, 2000);
+          } catch (e) {
+            alert('Your Registration ID: ' + text);
+          }
+        });
+      }
+
+      // Register Another button
+      if (registerAnotherBtn) {
+        registerAnotherBtn.addEventListener('click', () => {
+          form.reset();
+          clearErrors();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Submit Beta Application</span><span class="btn-arrow">&rarr;</span>';
+          successCard.classList.add('hidden');
+          formCard.classList.remove('hidden');
+          formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+
+      // Status Lookup Form
+      const statusForm = document.getElementById('statusForm');
+      const statusQuery = document.getElementById('statusQuery');
+      const statusResult = document.getElementById('statusResult');
+      const statusBtn = document.getElementById('statusLookupBtn');
+
+      if (statusForm) {
+        statusForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const query = statusQuery.value.trim().toLowerCase();
+          if (!query) return;
+
+          statusBtn.disabled = true;
+          statusBtn.textContent = 'Checking...';
+          statusResult.classList.remove('hidden');
+          statusResult.innerHTML = '<p class="status-searching">Checking beta registry...</p>';
+
+          // Check local storage first
+          try {
+            const localSubs = JSON.parse(localStorage.getItem('kcleaner_beta_regs') || '[]');
+            const localMatch = localSubs.find(s => s.email.toLowerCase() === query || s.regId.toLowerCase() === query);
+            
+            setTimeout(() => {
+              statusBtn.disabled = false;
+              statusBtn.textContent = 'Check Status';
+              if (localMatch) {
+                statusResult.innerHTML = `
+                  <div class="status-card-found">
+                    <div class="status-badge-pill status-pending">Status: Application In Review (Pending)</div>
+                    <p style="margin-top: 8px; font-size: 13px; color: var(--text-secondary);">
+                      Application for <strong>${localMatch.email}</strong> (ID: <code>${localMatch.regId}</code>) was received and is queued for closed testing whitelisting on Google Play Console.
+                    </p>
+                  </div>
+                `;
+              } else {
+                statusResult.innerHTML = `
+                  <div class="status-card-found">
+                    <div class="status-badge-pill" style="background: #e2e8f0; color: #475569;">Status: Queued / In Review</div>
+                    <p style="margin-top: 8px; font-size: 13px; color: var(--text-secondary);">
+                      If you recently submitted for <strong>${query}</strong>, your application is in the queue. You will receive an official Google Play opt-in link as soon as your batch is activated.
+                    </p>
+                  </div>
+                `;
+              }
+            }, 600);
+          } catch (e) {
+            statusBtn.disabled = false;
+            statusBtn.textContent = 'Check Status';
+          }
+        });
+      }
+
+      // Dynamic year in footer
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
