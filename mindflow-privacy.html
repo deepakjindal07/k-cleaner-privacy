@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060A12">
+  <meta name="description" content="Privacy Policy for MindFlow, a premium atmospheric audio wellness and meditation application developed by Deepak Kumar / KAD Labs.">
+  <meta name="author" content="Deepak Kumar">
+  <title>Privacy Policy — MindFlow</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#legal-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-container">
+      <a href="index.html" class="brand" aria-label="KAD Labs homepage">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-text">KAD <b>Labs</b></span>
+      </a>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="mindflow-terms.html" class="btn btn-secondary btn-sm">Terms of Use</a>
+        <a href="index.html" class="btn btn-secondary btn-sm">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="legal-content" class="legal-main wrap">
+    <div class="legal-header">
+      <div class="eyebrow">MINDFLOW &middot; PRIVACY POLICY</div>
+      <h1>MindFlow Privacy Policy</h1>
+      <p class="legal-updated">
+        <strong>Application:</strong> MindFlow (<code>com.kadlabs.mindflow</code>)<br>
+        <strong>Effective Date:</strong> November 1, 2026 &middot; <strong>Last Updated:</strong> November 1, 2026 &middot; <strong>Version:</strong> 1.0
+      </p>
+    </div>
+
+    <div class="legal-callout">
+      <strong>Privacy by Design:</strong> MindFlow is designed to protect your peace of mind and personal privacy. You can enjoy soundscapes and meditation in Guest Mode without ever sharing your name or email. We do not sell your personal data, and MindFlow contains <strong>zero third-party advertisements or ad-tracking SDKs</strong>.
+    </div>
+
+    <div class="legal-content">
+      <h2>1. Overview &amp; Data Controller</h2>
+      <p>
+        This Privacy Policy explains how <strong>MindFlow</strong> (&ldquo;the app&rdquo;), operated by <strong>Deepak Kumar / KAD Labs</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), handles information when you install and use the app.
+      </p>
+      <p>
+        <strong>Data Controller:</strong> Deepak Kumar, Founder of KAD Labs.<br>
+        <strong>Contact Email:</strong> <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a> / <a href="mailto:contact@kad-labs.com">contact@kad-labs.com</a><br>
+        <strong>Studio Website:</strong> <a href="https://kad-labs.com/">https://kad-labs.com/</a>
+      </p>
+
+      <h2>2. Information We Process &amp; How We Collect It</h2>
+
+      <h3>A. Guest Mode (Unauthenticated Usage)</h3>
+      <p>
+        You can use MindFlow completely as a guest without creating an account or providing an email address. When browsing as a guest, your listening statistics (hours listened, streaks, session counts), favorites, custom sound mixer presets, wellness journey progress, and theme settings are stored <strong>strictly locally on your device</strong> using device storage (SharedPreferences).
+      </p>
+
+      <h3>B. Optional Account Creation (Google Sign-In via Supabase)</h3>
+      <p>
+        If you choose to sign in using Google Sign-In:
+      </p>
+      <ul>
+        <li><strong>Authentication Provider:</strong> We use Google OAuth 2.0 integrated with <strong>Supabase Auth</strong>.</li>
+        <li><strong>Information Received:</strong> Your Google unique user ID, verified email address, display name, and profile avatar picture URL.</li>
+        <li><strong>Supabase Profile Record:</strong> A secure record is created in our Supabase PostgreSQL database table (<code>profiles</code>) containing your user ID, display name, email, and avatar URL. This table is protected by Row Level Security (RLS) so that only you can access or modify your personal profile.</li>
+        <li><strong>Seamless Guest Data Migration:</strong> Upon signing in for the first time, MindFlow migrates your offline listening stats, favorites, and wellness journey data to your account so you do not lose your progress.</li>
+      </ul>
+
+      <h3>C. In-App Subscriptions &amp; Purchases (RevenueCat &amp; Google Play Billing)</h3>
+      <p>
+        MindFlow offers optional subscription plans (Annual with 7-Day Free Trial, Monthly) and Lifetime access.
+      </p>
+      <ul>
+        <li><strong>Payment Processing:</strong> All payments and monetary transactions are handled directly and securely by <strong>Google Play Billing</strong>. KAD Labs never collects, processes, receives, or stores your credit card details, debit card numbers, bank credentials, or billing address.</li>
+        <li><strong>Purchase &amp; Entitlement Verification:</strong> We use <strong>RevenueCat</strong> (Purchases SDK) to manage subscription receipts, free trial eligibility, renewal status, and unlock the <code>kad_labs</code> premium entitlement. RevenueCat receives an anonymous App User ID, transaction ID, store product identifier, and purchase timestamps.</li>
+      </ul>
+
+      <h3>D. Audio Playback &amp; Device Permissions</h3>
+      <ul>
+        <li><strong>Foreground Service (Media Playback):</strong> MindFlow uses Android's foreground service (<code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>) to maintain uninterrupted ambient soundscape and story playback when your screen is locked or while multitasking.</li>
+        <li><strong>Notifications:</strong> MindFlow requests notification permissions strictly to display media player controls (play/pause/skip) on your lockscreen and to trigger optional daily mindfulness reminder alerts that you configure in Settings.</li>
+        <li><strong>No Audio or Microphone Recording:</strong> MindFlow does not request or use microphone permissions and does not record or analyze your environment.</li>
+      </ul>
+
+      <h2>3. No Third-Party Advertising &amp; No Data Brokering</h2>
+      <p>
+        MindFlow does not include any third-party advertising SDKs (such as Google AdMob, Meta Audience Network, Unity Ads, or similar networks). We do not serve personalized ads, track your activity across third-party websites or apps, or sell, rent, or trade your personal information to data brokers.
+      </p>
+
+      <h2>4. Data Storage, Security &amp; Retention</h2>
+      <p>
+        We employ industry-standard encryption protocols (TLS/HTTPS in transit and AES-256 at rest) for all network communications with Supabase and RevenueCat.
+      </p>
+      <ul>
+        <li><strong>Local Data:</strong> Remains on your device until you clear app cache/data or uninstall the app.</li>
+        <li><strong>Account Data:</strong> Retained for the duration of your active account so that you can restore purchases and sync your wellness progress across devices.</li>
+      </ul>
+
+      <h2>5. Your Rights &amp; Account Deletion</h2>
+      <p>
+        Depending on your location (including under GDPR, CCPA, and Indian Digital Personal Data Protection laws), you have the right to access, rectify, export, or permanently delete your account and personal data.
+      </p>
+      <p>
+        To permanently delete your MindFlow account and all associated profile information from our database, you may:
+      </p>
+      <ul>
+        <li>Email our developer support directly at <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a> with the subject line <em>&ldquo;MindFlow Account Deletion Request&rdquo;</em> from your registered Google email address.</li>
+        <li>Your account and associated profile records will be permanently purged within 30 days.</li>
+      </ul>
+
+      <h2>6. Children's Privacy</h2>
+      <p>
+        MindFlow is intended for general wellness audiences and is not directed to children under 13 years of age. We do not knowingly collect personal data from children under 13. If you become aware that a child has provided us with personal information without parental consent, please contact us immediately, and we will promptly delete the data.
+      </p>
+
+      <h2>7. Changes to this Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect product enhancements, security updates, or legal compliance. Any changes will be published on this page with an updated &ldquo;Last Updated&rdquo; date. Continued use of MindFlow after updates constitutes acceptance of the revised policy.
+      </p>
+
+      <h2>8. Contact Information</h2>
+      <p>
+        If you have questions, feedback, or data privacy requests regarding MindFlow, please contact:
+      </p>
+      <ul>
+        <li><strong>Founder &amp; Developer:</strong> Deepak Kumar</li>
+        <li><strong>Support Email:</strong> <a href="mailto:deepak.jindal07@gmail.com">deepak.jindal07@gmail.com</a></li>
+        <li><strong>Official Studio Inquiries:</strong> <a href="mailto:contact@kad-labs.com">contact@kad-labs.com</a></li>
+        <li><strong>Studio Website:</strong> <a href="https://kad-labs.com/">https://kad-labs.com/</a></li>
+      </ul>
+    </div>
+
+    <div class="legal-actions">
+      <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+      <a href="mindflow-terms.html" class="btn btn-secondary">MindFlow Terms of Use</a>
+      <a href="privacy.html" class="btn btn-secondary">KAD Labs Website Privacy</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom">
+      <div>&copy; <span id="year">2026</span> KAD Labs. All rights reserved.</div>
+      <div>MindFlow &middot; Atmospheric Audio Wellness by Deepak Kumar</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
